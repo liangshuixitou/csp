@@ -15,11 +15,11 @@ int min_time = 1000000;
 
 /**
  * params
- *  G ÁÚ½Ó±í
- *  start µ±Ç°ÆğÊ¼µã
- *  end ÖÕÖ¹µã
- *  path[] µ±Ç°Â·¾¶
- *  top µ±Ç°µİ¹éµÄ²ãÊı
+ *  G é‚»æ¥è¡¨
+ *  start å½“å‰èµ·å§‹ç‚¹
+ *  end ç»ˆæ­¢ç‚¹
+ *  path[] å½“å‰è·¯å¾„
+ *  top å½“å‰é€’å½’çš„å±‚æ•°
  */
 void findAllPath(vector<LN> G[], int start, int end, LN path[], int top)
 {
@@ -50,14 +50,14 @@ void findAllPath(vector<LN> G[], int start, int end, LN path[], int top)
 int main()
 {
     /**
-     * ±¾Ìâ²ÉÓÃdfsÕÒËùÓĞÂ·¾¶µÄË¼Ïë 
+     * æœ¬é¢˜é‡‡ç”¨dfsæ‰¾æ‰€æœ‰è·¯å¾„çš„æ€æƒ³ 
      */
 
     cin >> n >> m;
     int x, y;
     vector<LN> G[n + 1];
     LN ln;
-    //¹¹½¨ÁÚ½Ó±í
+    //æ„å»ºé‚»æ¥è¡¨
     for (int i = 0; i < m; ++i)
     {
         cin >> x >> y >> ln.weight;
@@ -67,7 +67,7 @@ int main()
         G[x].push_back(ln);
     }
 
-    //Ñ°ÕÒËùÓĞÂ·¾¶
+    //å¯»æ‰¾æ‰€æœ‰è·¯å¾„
     LN path[n];
     path[0].index = 1;
     vis[1] = 1;
@@ -75,4 +75,5 @@ int main()
     cout << min_time;
     system("pause");
     return 0;
+
 }
